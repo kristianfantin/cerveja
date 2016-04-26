@@ -1,0 +1,24 @@
+{
+  "name": "cerveja",
+  "description": "",
+  "main": "",
+  "authors": [
+    "kristianfantin <kristianfantin@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-ui-router": "^0.2.18",
+    "angular": "^1.5.5",
+    "bootstrap": "^3.3.6",
+    "toastr": "^2.1.2"
+  }
+}

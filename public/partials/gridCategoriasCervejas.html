@@ -1,0 +1,29 @@
+<div class="row">
+  <div class="col-sm-9">
+    <h2>Lista de Categorias de Cervejas</h2>
+  </div>
+  <div class="col-sm-3 ">
+    <a style="margin-top: 20px; margin-bottom: 20px" class="btn btn-primary form-control" ui-sref="cadastroCategoriaCerveja">Nova</a>
+  </div>
+</div>
+
+<table class="table table-striped">
+  <thead>
+  <th class="col-sm-4">Descricao</th>
+  <th class="col-sm-6">Observacao</th>
+  </thead>
+  <tbody>
+  <tr ng-repeat="categoria in ctrl.categoriasCervejas track by $index">
+    <td>{{categoria.descricao}}</td>
+    <td>{{categoria.observacao}}</td>
+    <td>
+      <button class="btn btn-default btn-sm" ui-sref="edicaoCategoriaCerveja({id: categoria.id})">
+        <i class="glyphicon glyphicon-edit"></i>
+      </button>
+      <button class="btn btn-default btn-sm" ng-click="ctrl.remover(categoria.id)">
+        <i class="glyphicon glyphicon-remove"></i>
+      </button>
+    </td>
+  </tr>
+  </tbody>
+</table>

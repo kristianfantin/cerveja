@@ -1,0 +1,31 @@
+doctype html
+html(ng-app='cerveja')
+  head
+    title= title
+    link(rel='stylesheet', href='/css/style.css')
+    link(rel='stylesheet' href='/lib/bootstrap/dist/css/bootstrap.min.css')
+    link(rel='stylesheet' href='/lib/toastr/toastr.min.css')
+  body
+    block content
+    script(src='/lib/jquery/dist/jquery.min.js')
+    script(src='/lib/bootstrap/dist/js/bootstrap.min.js')
+    script(src='/lib/toastr/toastr.min.js')
+    script(src='/lib/angular/angular.min.js')
+    script(src='/lib/angular-ui-router/release/angular-ui-router.min.js')
+
+    script(src='/js/app.js')
+    script(src='/js/controllers/cadastroCerveja.controller.js')
+    script(src='/js/controllers/edicaoCerveja.controller.js')
+    script(src='/js/controllers/listaCerveja.controller.js')
+    script(src='/js/services/cerveja.service.js')
+    script(src='/js/directives/focus.js')
+
+    script(src='/js/controllers/cadastroCategoriaCerveja.controller.js')
+    script(src='/js/services/categoriaCerveja.service.js')
+    script(src='/js/controllers/listaCategoriaCerveja.controller.js')
+    script(src='/js/controllers/edicaoCategoriaCerveja.controller.js')
+
+    script(src='/js/controllers/cadastroEmpresaCerveja.controller.js')
+    script(src='/js/services/empresaCerveja.service.js')
+    script(src='/js/controllers/listaEmpresaCerveja.controller.js')
+    script(src='/js/controllers/edicaoEmpresaCerveja.controller.js')

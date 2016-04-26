@@ -1,0 +1,57 @@
+<form ng-submit="ctrl.salvar()">
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="form-group">
+        <label for="nome">Nome</label>
+        <input id='nome' type="text" class="form-control"
+               ng-model="ctrl.cerveja.nome" focus="!ctrl.edicao"
+               ng-disabled="ctrl.edicao">
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="form-group">
+        <label for="preco">Preço</label>
+        <input id='preco' type="text" class="form-control" ng-model="ctrl.cerveja.preco" focus="ctrl.edicao">
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="form-group">
+        <label for="empresa">Empresa</label>
+        <select ng-model="ctrl.cerveja.empresa" class="form-control">
+          <option value="{{empresa.id}}" ng-repeat="empresa in ctrl.empresas">{{empresa.descricao}}</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="col-sm-4">
+      <div class="form-group">
+        <label for="categoria">Categoria</label>
+        <select ng-model="ctrl.cerveja.categoria" class="form-control">
+          <option value="{{categoria.id}}" ng-repeat="categoria in ctrl.categorias">{{categoria.descricao}}</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="col-sm-4">
+      <div class="form-group">
+        <label for="dataOrigem">Data Origem</label>
+        <input id='dataOrigem' type="date" class="form-control" ng-model="ctrl.cerveja.dataOrigem">
+      </div>
+    </div>
+  </div>
+
+  <div class="row" style="margin-top: 20px">
+    <div class="col-sm-6"/>
+    <div class="col-sm-3">
+      <button class="btn btn-default form-control" ui-sref="listaCerveja">Voltar</button>
+    </div>
+    <div class="col-sm-3">
+      <button class="btn btn-primary form-control">Salvar</button>
+    </div>
+  </div>
+</form>
+
+

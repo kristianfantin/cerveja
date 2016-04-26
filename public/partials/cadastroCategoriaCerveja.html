@@ -1,0 +1,34 @@
+<form ng-submit="ctrl.salvar()">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="form-group">
+        <label for="descricao">Descrição Categoria</label>
+        <input id='nome' type="text" class="form-control"
+               ng-model="ctrl.categoriaCerveja.descricao"
+               focus="true">
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="form-group">
+        <label for="observacao">Observações</label>
+        <textarea
+            name="Observação"
+            id="observacao"
+            rows="10"
+            class="form-control"
+            ng-model="ctrl.categoriaCerveja.observacao"></textarea>
+      </div>
+    </div>
+  </div>
+  <div class="row" style="margin-top: 20px">
+    <div class="col-sm-6"/>
+    <div class="col-sm-3">
+      <button class="btn btn-default form-control" ui-sref="listaCategoriaCerveja">Voltar</button>
+    </div>
+    <div class="col-sm-3">
+      <button class="btn btn-primary form-control">Salvar</button>
+    </div>
+  </div>
+</form>
